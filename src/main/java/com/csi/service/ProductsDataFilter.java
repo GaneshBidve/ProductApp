@@ -12,6 +12,14 @@ public class ProductsDataFilter {
 
 	public List<Product> filterData(List<Product> products) {
 
-		return null;
+		List<Product> filteredProducts = new ArrayList<Product>();
+
+		for (Product p : products) {
+			if (p.getProductPrice() >= 3000) {
+				filteredProducts.add(p);
+			}
+		}
+
+		return filteredProducts;
 	}
 }
